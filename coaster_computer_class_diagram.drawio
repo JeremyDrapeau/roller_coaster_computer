@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.0 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36" version="29.3.0">
   <diagram name="Page-1" id="V_DCkRQG0WzhURgZUggu">
-    <mxGraphModel dx="1722" dy="2101" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1426" dy="1941" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -73,7 +73,7 @@
         <mxCell id="SdyBGqJh5EXPO8YeX4wh-28" parent="SdyBGqJh5EXPO8YeX4wh-7" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="name : str" vertex="1">
           <mxGeometry height="40" width="140" y="70" as="geometry" />
         </mxCell>
-        <mxCell id="SdyBGqJh5EXPO8YeX4wh-8" parent="SdyBGqJh5EXPO8YeX4wh-7" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="messages : Message[]" vertex="1">
+        <mxCell id="SdyBGqJh5EXPO8YeX4wh-8" parent="SdyBGqJh5EXPO8YeX4wh-7" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="messages : list[Message]" vertex="1">
           <mxGeometry height="40" width="140" y="110" as="geometry" />
         </mxCell>
         <mxCell id="SdyBGqJh5EXPO8YeX4wh-9" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;" value="Message" vertex="1">
@@ -107,16 +107,25 @@
           <mxGeometry height="40" width="140" y="110" as="geometry" />
         </mxCell>
         <mxCell id="SdyBGqJh5EXPO8YeX4wh-24" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Channel Methods" vertex="1">
-          <mxGeometry height="150" width="140" x="480" y="-440" as="geometry" />
+          <mxGeometry height="280" width="140" x="480" y="-440" as="geometry" />
         </mxCell>
-        <mxCell id="SdyBGqJh5EXPO8YeX4wh-25" parent="SdyBGqJh5EXPO8YeX4wh-24" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="__init__(self, id)" vertex="1">
+        <mxCell id="SdyBGqJh5EXPO8YeX4wh-25" parent="SdyBGqJh5EXPO8YeX4wh-24" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="__init__(self, id) -&amp;gt; None" vertex="1">
           <mxGeometry height="40" width="140" y="30" as="geometry" />
         </mxCell>
-        <mxCell id="SdyBGqJh5EXPO8YeX4wh-26" parent="SdyBGqJh5EXPO8YeX4wh-24" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="get_last_message(self)" vertex="1">
+        <mxCell id="AW3_uLomyh_CWXtgeeq0-1" parent="SdyBGqJh5EXPO8YeX4wh-24" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="get_id(self) -&amp;gt; int" vertex="1">
           <mxGeometry height="40" width="140" y="70" as="geometry" />
         </mxCell>
-        <mxCell id="SdyBGqJh5EXPO8YeX4wh-27" parent="SdyBGqJh5EXPO8YeX4wh-24" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="rm_channel(self, id)" vertex="1">
+        <mxCell id="AW3_uLomyh_CWXtgeeq0-2" parent="SdyBGqJh5EXPO8YeX4wh-24" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="get_name(self) -&amp;gt; str" vertex="1">
           <mxGeometry height="40" width="140" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="SdyBGqJh5EXPO8YeX4wh-26" parent="SdyBGqJh5EXPO8YeX4wh-24" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="get_last_message(self) -&amp;gt; Message" vertex="1">
+          <mxGeometry height="40" width="140" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="SdyBGqJh5EXPO8YeX4wh-27" parent="SdyBGqJh5EXPO8YeX4wh-24" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="get_all_messages(self) -&amp;gt; list[Message]" vertex="1">
+          <mxGeometry height="40" width="140" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="AW3_uLomyh_CWXtgeeq0-3" parent="SdyBGqJh5EXPO8YeX4wh-24" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="add_message(self, importance, string) -&amp;gt; None" vertex="1">
+          <mxGeometry height="50" width="140" y="230" as="geometry" />
         </mxCell>
         <mxCell id="yjj-qwRiQ9nU9mXj3Nln-1" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Message Methods" vertex="1">
           <mxGeometry height="240" width="140" x="800" y="-440" as="geometry">

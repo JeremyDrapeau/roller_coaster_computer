@@ -21,7 +21,7 @@ class Message :
     timestamp : datetime
     """Date and time of message creation"""
  
-    def __init__(self, id, importance, string) -> None:
+    def __init__(self, id : int, importance : int, string : str) -> None:
         """
         Create a message. The "timestamp" variable is automaticaly setted to the current
         computer's time.
@@ -37,39 +37,3 @@ class Message :
         # timestamp is automaticaly set (based on this computer's current time) so there's no
         # need to provide a source of time
         self.timestamp = datetime.now()
-
-    def get_id(self) -> int :
-        """
-        Getter of the "id" variable of this message.
-
-        :return: This message's unique identifier
-        :rtype: int
-        """
-        return self.id
-
-    def get_importance(self) -> int :
-        """
-        Getter of the "importance" variable of this message.
-
-        :return: This message's importance level (0=low importance, 99=high importance)
-        :rtype: int
-        """
-        return self.importance
-
-    def get_string(self) -> str :
-        """
-        Getter of the "string" variable of this message.
-
-        :return: This message's actual message as a string
-        :rtype: str
-        """
-        return self.string
-    
-    def get_timestamp(self) -> datetime :
-        """
-        Getter of the "timestamp" variable of this message.
-
-        :return: This message's date and time of it's creation
-        :rtype: datetime
-        """
-        return self.timestamp
