@@ -56,6 +56,7 @@ class Channel :
         else :
             return None
 
+<<<<<<< HEAD:python_program/MMS/Channel.py
     def add_message(self, importance : int, string : str) -> None :
         """
         Add a message to this channel, by providing the importance level and the actual message.
@@ -64,9 +65,52 @@ class Channel :
         :type importance: int
         :param string: The new message's actual message
         :type string: str
+=======
+    def add_message(self, importance, string) -> None :
+        """
+        Add a message to this channel. After adding the message, it can be
+        accessed via function that retrieves messages from this channel.
+        
+        :param importance: The level of importance of this message
+        :param string: The message's actual message (Can describe error,
+        alert, etc...)
+>>>>>>> 1f7bae21edd76bf27d1108c540427457bc944f3a:python_program/Channel.py
         """
         if len(self.messages) == 0 :
             self.messages.append(Message(0, importance, string))
         else :
             self.messages.append(Message(self.messages[len(self.messages) - 1].id + 1, importance, string))
         return None
+    
+    def get_message_with_importance(self, importance) -> list[Message] :
+        """
+        Returns all the messages with the importance specified in the parameter
+        from this channel.
+
+        :param importance: Importance level of messages to search for
+        :return: List of all messages found in this channel with the importance
+        level specified in the parameter of the function.
+        :rtype: list[Message]
+        """
+        msg_list = list()
+        for i in self.messages :
+            if i.importance == importance :
+                msg_list.append(i)
+        return msg_list
+    
+    def get_message_importance_range(self, min, max) -> list[Message] :
+        """
+        Returns all the messages in this channel within the importance range
+        specified in the method's parameter.
+
+        :param min: Minimum importance to search for
+        :param max: Maximum importance to search for
+        :return: List of all messages found in this channel with the importance
+        level range specified in the parameters of the function.
+        :rtype: list[Message]
+        """
+        msg_list = list()
+        for i in self.messages :
+            if i.importance >= min and i.importance <= max :
+                msg_list.append(i)
+        return msg_list
