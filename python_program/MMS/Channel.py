@@ -1,4 +1,5 @@
-from Message import Message
+from MMS.Message import Message
+
 class Channel :
     """
     Channel is used to group messages of a same subject. It contains all the messages
@@ -15,13 +16,16 @@ class Channel :
     messages = list()
     """ List of all messages related to this channel """
 
-    def __init__(self, id : int, name : str) -> list[Message] :
+    def __init__(self, id : int, name : str) -> None :
         """
         Create a new channel with an unique identifier and a name.
         
-        :param id: Channel's unique identifier
-        :param name: Channel's name
+        :param id: This channel's unique identifier
+        :type id: int
+        :param name: This channel's name
+        :type name: str
         """
+        
         self.id = id
         self.name = name
     
@@ -52,7 +56,15 @@ class Channel :
         else :
             return None
 
-    def add_message(self, importance, string) -> None :
+    def add_message(self, importance : int, string : str) -> None :
+        """
+        Add a message to this channel, by providing the importance level and the actual message.
+        
+        :param importance: The new message's importance level
+        :type importance: int
+        :param string: The new message's actual message
+        :type string: str
+        """
         if len(self.messages) == 0 :
             self.messages.append(Message(0, importance, string))
         else :

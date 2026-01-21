@@ -1,5 +1,5 @@
-from Message import Message
-from Channel import Channel
+from MMS.Message import Message
+from MMS.Channel import Channel
 
 test = Channel(1, "Test channel")
 print(f"Channel id : {test.id} | Channel name : {test.name}")
